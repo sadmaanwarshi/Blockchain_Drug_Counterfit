@@ -1,11 +1,10 @@
-const { Pool } = require("pg");
-require("dotenv").config();
+const { Pool } = require('pg');
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: process.env.NODE_ENV === "production" 
-       ? { rejectUnauthorized: false } 
-       : false,
+  connectionString: 'postgresql://postgres:Sad7004431954@db.mvzxffhbtzqksdgdmbze.supabase.co:5432/postgres',
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 module.exports = pool;
