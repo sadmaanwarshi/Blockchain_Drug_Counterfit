@@ -15,6 +15,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('Backend is running');
+});
+
 app.use('/api/medicine', medicineRoutes);
 app.use('/api', verifyRoutes);
 app.use('/api', logsRoutes);
