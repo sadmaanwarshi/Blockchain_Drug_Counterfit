@@ -5,9 +5,9 @@ const pool = require("../db");
 const router = express.Router();
 
 router.post("/register/manufacturer", async (req, res) => {
-  const { name, license_no, email, password_hash } = req.body;
+  const { name, license_no, email, password } = req.body;
 
-  if (!name || !license_no || !email || !password_hash) {
+  if (!name || !license_no || !email || !password) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
@@ -22,11 +22,11 @@ router.post("/register/manufacturer", async (req, res) => {
     }
 
     // Hash password
-    const hashedPassword = await bcrypt.hash(password_hash, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
 
     // Insert into DB
     await pool.query(
-      "INSERT INTO manufacturers (name, license_no, email, password_hash) VALUES ($1, $2, $3, $4)",
+      "INSERT INTO manufacturers (name, license_no, email, password) VALUES ($1, $2, $3, $4)",
       [name, license_no, email, hashedPassword]
     );
 
