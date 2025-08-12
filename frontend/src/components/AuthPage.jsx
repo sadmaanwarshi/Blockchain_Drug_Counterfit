@@ -30,7 +30,7 @@ export default function AuthPage() {
           return;
         }
         // Registration
-        await axios.post(`http://localhost:5000/api/register/${role}`, {
+        await axios.post(`https://blockchain-drug-counterfit.vercel.app/api/register/${role}`, {
           name: form.name,
           license_no: form.license_no,
           email: form.email,
@@ -40,7 +40,7 @@ export default function AuthPage() {
         setIsRegister(false);
       } else {
         // Login
-        const res = await axios.post(`http://localhost:5000/api/login/${role}`, {
+        const res = await axios.post(`https://blockchain-drug-counterfit.vercel.app/api/login/${role}`, {
           email: form.email,
           password: form.password,
         });

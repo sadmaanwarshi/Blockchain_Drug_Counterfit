@@ -26,7 +26,7 @@ export default function VerifyMedicine() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/verify",
+        "https://blockchain-drug-counterfit.vercel.app/api/verify",
         { tag_id: tagId },
         {
           headers: {

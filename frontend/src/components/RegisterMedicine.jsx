@@ -29,7 +29,7 @@ export default function RegisterMedicine() {
       }
 
       const res = await axios.post(
-        "http://localhost:5000/api/medicine/register",
+        "https://blockchain-drug-counterfit.vercel.app/api/medicine/register",
         form,
         {
           headers: {

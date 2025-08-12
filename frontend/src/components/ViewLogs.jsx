@@ -14,7 +14,7 @@ const ViewLogs = () => {
     setError("");
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/blockchain/logs/${tagId}`);
+      const res = await fetch(`https://blockchain-drug-counterfit.vercel.app/api/blockchain/logs/${tagId}`);
       const data = await res.json();
 
       if (!res.ok) {
