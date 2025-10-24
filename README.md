@@ -11,16 +11,30 @@ This prototype simulates the **RFID/QR-based verification process** with a secur
 
 ---
 
-## 🚀 Features
-- Scan QR Code to validate medicines.
-- Blockchain verification to ensure tamper-proof data.
-- Check expiry date and manufacturer details.
-- REST API for integration with other systems.
-- PostgreSQL database for storing medicine and blockchain transaction data.
+
+
+## ✨ Key Features
+
+- **Secure User Authentication:** Separate login and registration flows for Manufacturers and Pharmacists.
+- **Blockchain Integration:** All medicine registrations and verifications are recorded as transactions on a secure blockchain, ensuring data integrity.
+- **Medicine Registration:** Manufacturers can register new medicines with unique details like name and batch number, creating a permanent record on the blockchain.
+- **Instant Verification:** Pharmacists can instantly verify a medicine's authenticity by searching its details.
+- **Transparent Logging:** All verification activities are logged and publicly viewable, providing a transparent audit trail.
+- **PDF Export:** Verification logs can be exported as a PDF for documentation and reporting.
+- **Fully Responsive Design:** A clean and modern user interface that works seamlessly on both desktop and mobile devices.
 
 ---
 
 ## 🛠 Tech Stack
+
+### Frontend
+- **Framework:** [React](https://reactjs.org/) (via Create React App)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Routing:** [React Router](https://reactrouter.com/)
+- **Icons:** [Heroicons](https://heroicons.com/)
+- **HTTP Client:** [Axios](https://axios-http.com/)
+- **PDF Generation:** [jsPDF](https://github.com/parallax/jsPDF) & [jspdf-autotable](https://github.com/simonbengtsson/jsPDF-AutoTable)
+
 - **Backend:** Node.js, Express.js
 - **Database:** PostgreSQL (Supabase)
 - **Blockchain Simulation:** Custom implementation
@@ -143,6 +157,12 @@ Response:
 ]
 ```
 ---
+
+## 🚀 Deployment
+
+The frontend of this application is configured for easy deployment on [Vercel](https://vercel.com/).
+
+---
 ## 📜 License
 This project is licensed under the MIT License.
 
@@ -166,7 +186,7 @@ Name: Sadmaan Warshi
 
 Email:spwarshi@gmail.com
 
-Live Link:
+Live Link: https://pharma-chain-two.vercel.app
 
 
 
